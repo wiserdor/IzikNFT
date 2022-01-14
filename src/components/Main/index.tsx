@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import About from "../About";
 import Navbar from "../Navbar";
 import BG from "../../res/izik.jpeg";
 import Roadmap from "../Roadmap";
 
 const Main = () => {
+  const [amount, setAmount] = useState("1");
   return (
     <div
       className="bg-fixed bg-center"
@@ -14,7 +15,7 @@ const Main = () => {
       <div className="bg-quote container flex items-center justify-center h-screen mx-auto">
         <blockquote className="bg-black font-serif mx-4 p-4 text-center text-white md:p-8">
           <p className="font-bold italic text-3xl">
-            &ldquo;The tree doesn't fall far from the apple. Izik.&rdquo;
+            &ldquo;I am a unicorn🦄. Izik R.&rdquo;
           </p>
         </blockquote>
       </div>
@@ -33,6 +34,8 @@ const Main = () => {
               id="mintNum"
               placeholder="How many?"
               type="number"
+              value={amount}
+              onChange={(e) => setAmount(e.target.value)}
               defaultValue={1}
               min={1}
               className="ml-4 w-11 border text-center transition duration-500 rounded-md "
@@ -40,6 +43,9 @@ const Main = () => {
           </div>
           <div className="mt-4 bg-white border hover:bg-gray-50 text-black font-bold py-4 px-8 rounded inline-flex items-center cursor-pointer">
             <span>Mint</span>
+          </div>
+          <div className="ml-2 font-mono">
+            you will pay: {parseInt(amount) * 0.01} +Gas
           </div>
         </div>
         <Roadmap />

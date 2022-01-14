@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/IzikNFT/static/css/main.1798b12b.css",
-    "main.js": "/IzikNFT/static/js/main.bcd13c25.js",
+    "main.js": "/IzikNFT/static/js/main.6dcee43d.js",
     "static/js/787.38e23e6a.chunk.js": "/IzikNFT/static/js/787.38e23e6a.chunk.js",
     "static/media/izik.jpeg": "/IzikNFT/static/media/izik.3bc8da1ff4a292f03757.jpeg",
     "static/media/metamask.svg": "/IzikNFT/static/media/metamask.4368e45a954072443e7a106ca3900e0a.svg",
     "index.html": "/IzikNFT/index.html",
     "main.1798b12b.css.map": "/IzikNFT/static/css/main.1798b12b.css.map",
-    "main.bcd13c25.js.map": "/IzikNFT/static/js/main.bcd13c25.js.map",
+    "main.6dcee43d.js.map": "/IzikNFT/static/js/main.6dcee43d.js.map",
     "787.38e23e6a.chunk.js.map": "/IzikNFT/static/js/787.38e23e6a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1798b12b.css",
-    "static/js/main.bcd13c25.js"
+    "static/js/main.6dcee43d.js"
   ]
 }

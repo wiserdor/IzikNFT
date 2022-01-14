@@ -29,7 +29,7 @@ const Main = () => {
         >
           <div className="text-5xl tracking-widest divide-y-2">Mint Now</div>
           <div className="justify-center items-center mt-8  flex">
-            <label htmlFor="mintNum">How many? </label>
+            <label htmlFor="mintNum">How many? (10 Maximum)</label>
             <input
               id="mintNum"
               placeholder="How many?"
@@ -38,6 +38,7 @@ const Main = () => {
               onChange={(e) => setAmount(e.target.value)}
               defaultValue={1}
               min={1}
+              max={10}
               className="ml-4 w-11 border text-center transition duration-500 rounded-md "
             ></input>
           </div>

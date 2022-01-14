@@ -16,6 +16,22 @@ const About = () => {
           alone, walk with us, together we are strong.
         </div>
       </div>
+      <div className="flex flex-col md:flex-row mt-16 items-baseline">
+        <div className=" text-3xl font-mono md:text-left">
+          What are the benefits?
+        </div>
+        <div className="font-medium ml-4">
+          You will be Izik friend, Izik friend will always benefit! it's not a question.
+        </div>
+      </div>
+      <div className="flex flex-col md:flex-row mt-16 items-baseline">
+        <div className=" text-3xl font-mono md:text-left">
+          What is the price?
+        </div>
+        <div className="font-medium ml-4">
+          The price is <b>0.01 Ethereum</b> for 1 Izik NFT.
+        </div>
+      </div>
     </section>
   );
 };

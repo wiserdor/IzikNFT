@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Metamask from "./Metamask";
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <nav id="nav" className=" border-gray-300 sm:px-4 py-5 bg-black border-b-pink-400">
+    <nav
+      id="nav"
+      className=" border-gray-300 sm:px-4 py-5 bg-black border-b-pink-400"
+    >
       <div className="container flex flex-wrap justify-between center items-center mx-auto ">
         <a href="#" className="flex">
           <span className="self-center text-3xl whitespace-nowrap text-white dark:text-white rounded pr-8 pl-8 font-light">
@@ -18,6 +23,7 @@ const Navbar = () => {
           className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
           aria-controls="mobile-menu-2"
           aria-expanded="false"
+          onClick={() => setMenuOpen(!menuOpen)}
         >
           <span className="sr-only">Open main menu</span>
           <svg
@@ -45,7 +51,41 @@ const Navbar = () => {
             ></path>
           </svg>
         </button>
-        <div className="hidden w-full md:block md:w-auto" id="mobile-menu">
+        {menuOpen && (
+          <div className="md:hidden w-full" id="mobile-menu">
+            <ul className="flex flex-col items-center mt-4">
+              <li>
+                <a
+                  href="#about"
+                  className="block py-2 pr-4 pl-3 text-gray-300 border-b border-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  aria-current="page"
+                >
+                  About
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#mint"
+                  className="block py-2 pr-4 pl-3 text-gray-300 border-b border-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                >
+                  Mint
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#roadmap"
+                  className="block py-2 pr-4 pl-3 text-gray-300 border-b border-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                >
+                  Roadmap
+                </a>
+              </li>
+              <li>
+                <Metamask />
+              </li>
+            </ul>
+          </div>
+        )}
+        <div className="hidden w-full md:block md:w-auto" id="desktop-menu">
           <ul className="flex flex-col items-center mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
             <li>
               <a
